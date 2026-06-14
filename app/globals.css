@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0f1117;
+  --surface: #1a1d27;
+  --surface2: #22263a;
+  --border: #2e3347;
+  --accent: #6366f1;
+  --accent-hover: #4f52d4;
+  --danger: #ef4444;
+  --text: #e2e8f0;
+  --muted: #64748b;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: system-ui, sans-serif; margin: 0; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; }
+.btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; border-radius: 8px; border: none; cursor: pointer; font-size: 0.875rem; font-weight: 500; transition: all 0.15s; }
+.btn-primary { background: var(--accent); color: white; }
+.btn-primary:hover { background: var(--accent-hover); }
+.btn-ghost { background: transparent; color: var(--muted); border: 1px solid var(--border); }
+.btn-ghost:hover { color: var(--text); border-color: var(--accent); }
+.btn-danger { background: transparent; color: var(--danger); border: 1px solid var(--danger); }
+.btn-danger:hover { background: var(--danger); color: white; }
+input, select, textarea { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); padding: 0.5rem 0.75rem; font-size: 0.875rem; outline: none; width: 100%; transition: border-color 0.15s; }
+input:focus, select:focus, textarea:focus { border-color: var(--accent); }
+label { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.25rem; display: block; }
+.badge { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 99px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+.badge-low { background: #1e3a2f; color: #22c55e; }
+.badge-medium { background: #3a2e1e; color: #f59e0b; }
+.badge-high { background: #3a1e1e; color: #ef4444; }
+.badge-todo { background: #1e2a3a; color: #60a5fa; }
+.badge-in_progress { background: #2e1e3a; color: #a78bfa; }
+.badge-done { background: #1e3a2f; color: #22c55e; }
